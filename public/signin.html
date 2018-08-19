@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PKOlx - Sign In</title>
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/src/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/src/images/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+    <div id="background-outer">
+        <div id="background-inner"></div>
+    </div>
+
+    <section>
+        <div class="container">
+            <form class="auth-form">
+                <div class="form-group">
+                    <h2 class="text-center">Sign In</h2>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" placeholder="sample@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="form-control" placeholder="☻☻☻☻☻☻☻☻" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" style="float: right;" value="Sign In"><br />
+                    <a href="/signup.html">Don't have an account? Sign Up here...</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="custom-modal">
+        <div class="custom-modal-body">Body</div>
+    </div>
+
+
+    <div class="custom-loader">
+        <img src="/src/images/loader.png" alt="loader">
+        <span>Text</span>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/signin.js"></script>
+</body>
+
+</html>

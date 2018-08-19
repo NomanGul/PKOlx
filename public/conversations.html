@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <title>PKOlx - Conversations</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/src/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/src/images/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+    <header>
+        <a href="/index.html">PKOlx</a>
+        <i class="fas fa-bars" onClick="openMenu()"></i>
+    </header>
+
+    <nav id="side-menu">
+        <ul class="list-group">
+            <li class="list-group-item text-center" style="display: flex;align-items: center;justify-content: space-between">
+                <span id="greet-user">User</span>
+                <span id="close-menu">
+                    <i class="fas fa-times" onClick="closeMenu()"></i>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <a href="/index.html">Home</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/addPost.html">Post Add</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/favourites.html">Favourite Ads</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/conversations.html">Conversations</a>
+            </li>
+            <li class="list-group-item">
+                <button class="btn btn-danger" onClick="logout()">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <ul class="list-group" id="inbox-container"></ul>
+        </div>
+    </section>
+
+    <div class="custom-modal">
+        <div class="custom-modal-body">Body</div>
+    </div>
+
+    <div class="custom-loader">
+        <img src="/src/images/loader.png" alt="loader">
+        <span>Text</span>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/index.js"></script>
+    <script src="/src/js/conversations.js"></script>
+</body>
+
+</html>
