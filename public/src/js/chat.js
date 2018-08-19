@@ -1,4 +1,3 @@
-// const recieverUid = localStorage.getItem('otherUserUid');
 let recieverUid;
 const message_section = document.querySelector('#messages-section');
 const message_container = document.querySelector('#message-container');
@@ -25,7 +24,6 @@ send_message.addEventListener('submit', event => {
     .then( () => {
         typed_message.value = '';
         hideLoader();
-        // sendNotification(userMessage);
     })
 })
 
@@ -72,7 +70,7 @@ window.addEventListener('load', () => {
         const container = document.querySelector('.container');
         container.innerHTML = `
             <div class="jumbotron text-center">
-                <h2>You are offline but you can still see your Favourite ads</h2>
+                <h2>You are Offline :(</h2>
                 <a href="/favourites.html" class="btn btn-primary">See your Favourite ads</a>
             </div>
         `

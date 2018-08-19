@@ -1,5 +1,4 @@
-/**************** (1) Other Css *********************/
-/* #f79f1f */
+/*Misc CSS*/
 :root {
   --darkColor: #01a101;
   --lightColor: #64f764;
@@ -136,16 +135,6 @@ header a:hover {
   border-radius: 5%;
   box-shadow: 1px -1px 15px 2px #000;
 }
-.custom-modal-header {
-  height: 50px;
-  background: var(--darkColor);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
-  border-radius: 50%;
-}
 .custom-modal-body {
   height: 150px;
   display: flex;
@@ -163,7 +152,6 @@ header a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: var(--lightColor); */
   height: 100px;
   width: 200px;
   display: none;
@@ -177,7 +165,7 @@ header a:hover {
   animation: loading linear 500ms infinite forwards;
 }
 
-/**************** (2) Home Page Css *********************/
+/*Index.html CSS*/
 .container > form {
   width: 500px;
   margin: 0 auto;
@@ -264,8 +252,7 @@ header a:hover {
   z-index: 600;
 }
 
-/**************** (3) Message Page Css *********************/
-
+/*chat.html CSS*/
 #messages-section {
   height: calc(100vh - 60px);
   overflow: auto;
@@ -311,12 +298,10 @@ header a:hover {
   background-image: url("../images/avatar.png");  
 }
 
-/**************** (4) Signup & signin Page Css *********************/
+/*Signup & signin Page CSS*/
 .container .auth-form{
   margin-top: 8%;
   padding: 3%;
-  /* background-color: #237683; */
-  /* opacity: 0.8; */
   border-top: 0.5vw solid #237683;
   border-bottom: 0.5vw solid #237683;
   border-radius: 10%;
@@ -334,7 +319,7 @@ header a:hover {
   color: white;
 }
 
-/**************** (5) Inbox Page Css *********************/
+/* conversations.html CSS */
 .message {
   flex: 1;
   display: flex;
@@ -354,10 +339,7 @@ header a:hover {
   flex: 1;
 }
 
-/* ************************************************* */
-
-
-/*************** (6) Keyframes ***************/
+/*ANIMATIONS*/
 @keyframes loading {
   from {
     transform: rotate(0);
@@ -369,7 +351,7 @@ header a:hover {
 
 
 
-/*************** (7) Media Queries *******************/
+/*@media*/
 @media (max-width: 767px) {
   .custom-card {
     width: 100%;

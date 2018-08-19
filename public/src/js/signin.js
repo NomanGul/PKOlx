@@ -2,10 +2,9 @@ const form = document.querySelector('form');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 
-
 form.addEventListener('submit', e => {
     e.preventDefault();
-    showLoader('Logging in...');
+    showLoader('Signing in...');
     if(password.value.length < 1 || email.value.length < 1){
         showModal('All fields are Required!');
         hideLoader();

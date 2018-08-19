@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
         hideLoader();
         container.innerHTML = `
             <div class="jumbotron text-center">
-                <h2>You are offline but you can still see your Favourite ads</h2>
+                <h2>You are Offline :(</h2>
                 <a href="/favourites.html" class="btn btn-primary">See your Favourite ads</a>
             </div>
         `

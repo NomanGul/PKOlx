@@ -3,7 +3,7 @@ const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
 exports.sendNotification = functions.firestore.document('rooms/{roomId}/messages/{messageId}')
-.onWrite((change,context) => {
+.onWrite((change, context) => {
     const receiverId = change.after.data().receiverId;
     const senderId = change.after.data().senderId;
     const name = change.after.data().senderName;
@@ -21,5 +21,4 @@ exports.sendNotification = functions.firestore.document('rooms/{roomId}/messages
         const token = data.deviceToken;
         return admin.messaging().sendToDevice(token, payload);
     });
-
 })

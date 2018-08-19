@@ -2,7 +2,6 @@ let currentUserUid;
 let currentUsername;
 let currentUserAvatar;
 
-// Functions related to Home and post ads
 document.addEventListener('DOMContentLoaded',()=>{
    if(localStorage.getItem('userUid')){
     showLoader('Setting up page...');
@@ -51,7 +50,6 @@ function requestToken(){
     })
 }
 
-// Functions related to Home page
 function fetchAds(){
     const container = document.querySelector('.container');
     if(navigator.onLine){
@@ -79,7 +77,7 @@ function fetchAds(){
         hideLoader();
         container.innerHTML = `
             <div class="jumbotron text-center">
-                <h2>You are offline but you can still see your Favourite ads</h2>
+                <h2>You are Offline :(</h2>
                 <a href="/favourites.html" class="btn btn-primary">See your Favourite ads</a>
             </div>
         `
@@ -109,7 +107,6 @@ function renderAds(ads,id){
             </div>
             <div class="details">
                 <button class="btn btn-primary" onClick="showDescription('${id}')"><i class="fas fa-info-circle"></i></button>
-                <!--<button class="btn btn-primary" onClick="routeToMessage('${ads.sellerUid}')">Contact Seller</button>-->
                 <i class="fab fa-facebook-messenger" onClick="routeToMessage('${ads.sellerUid}')"></i>
             </div>
         </div>
@@ -248,11 +245,9 @@ function routeToMessage(sellerUid){
     location.assign(`/chat.html?id=${sellerUid}`);
 }
 
-// Functions related to Submit Ads Page
 function submitAdd(){
     showLoader('Submitting...');
 
-    // DOM Shortcuts
     const productCategory = document.querySelector('#product-category');
     const productName = document.querySelector('#product-name');
     const productModel = document.querySelector('#product-model');
@@ -279,7 +274,7 @@ function submitAdd(){
         .then(()=>{
             return storeRef.child(`ads/${name}`).getDownloadURL();
         })
-        .then((url)=>{
+        .then( url =>{
             const data = {
                 productCategory : productCategory.value,
                 productName : (productName.value).toLowerCase(),
@@ -319,7 +314,7 @@ function clearAdForm(){
         const container = document.querySelector('.container');
         container.innerHTML = `
             <div class="jumbotron text-center">
-                <h2>You are offline but you can still see your Favourite ads</h2>
+                <h2>You are Offline :(</h2>
                 <a href="/favourites.html" class="btn btn-primary">See your Favourite ads</a>
             </div>
         `
@@ -330,7 +325,6 @@ function clearAdForm(){
     const productDescription = document.querySelector('#product-description').value = '';
 }
 
-// Functions related to Offline page
 function renderSaveAds(){
     const mainContainer = document.querySelector('.container');
     const container = document.querySelector('#ads-container');

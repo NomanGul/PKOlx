@@ -39,8 +39,6 @@ function showModal(message){
   setTimeout(hideModal,4000);
 }
 
-
-
 function hideModal(){
   setTimeout(()=>{
     modal.style.display = 'none';
@@ -49,8 +47,6 @@ function hideModal(){
   modal.style.opacity = '0';    
 }
 
-
-
 function showLoader(message){
   loader.querySelector('span').innerText = message;
   loader.style.display = 'flex';
@@ -58,8 +54,6 @@ function showLoader(message){
     loader.style.opacity = '1';    
   },100)
 }
-
-
 
 function hideLoader(){
   setTimeout(()=>{
@@ -98,7 +92,6 @@ function readURLParam(parameter){
   return param;
 }
 
-
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("/firebase-messaging-sw.js")
@@ -110,7 +103,6 @@ if ("serviceWorker" in navigator) {
         })
         .then(function(subscription) {
           console.log("subscription:", subscription.toJSON());
-          // GCM were used this endpoint
           console.log("endpoint:", subscription.endpoint);
         });
     })

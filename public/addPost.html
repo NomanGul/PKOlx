@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +12,6 @@
     <link rel="icon" type="image/png" href="/src/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/src/images/favicon-16x16.png" sizes="16x16" />
 </head>
-
 <body class="postAddBody" onLoad="clearAdForm()">
     <header>
         <a href="/index.html">PKOlx</a>
@@ -42,15 +39,15 @@
                     <label for="product-category">Select category:</label>
                     <select id="product-category" class="form-control">
                         <option value="0" selected disabled>Select Category:</option>
-                        <option value="mobile">Mobiles</option>
-                        <option value="electronic">Electronics</option>
                         <option value="home appliance">Home Appliances</option>
                         <option value="vehicle">Vehicles</option>
+                        <option value="job">Jobs</option>
+                        <option value="service">Services</option>
+                        <option value="mobile">Mobiles</option>
+                        <option value="electronic">Electronics</option>
                         <option value="bike">Bikes</option>
                         <option value="property sale">Property for sale</option>
                         <option value="property rent">Property for rent</option>
-                        <option value="job">Jobs</option>
-                        <option value="service">Services</option>
                         <option value="furniture">Furniture</option>
                         <option value="decoration">Decoration</option>
                         <option value="animal">Animals</option>
@@ -58,15 +55,15 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="product-name">Enter Product Name:</label>
+                    <label for="product-name">Product Name:</label>
                     <input type="text" id="product-name" class="form-control" placeholder="e.g. Unique">
                 </div>
                 <div class="form-group">
-                    <label for="product-model">Enter Product Model:</label>
+                    <label for="product-model">Product Model:</label>
                     <input type="text" id="product-model" class="form-control" placeholder="e.g. 2018">
                 </div>
                 <div class="form-group">
-                    <label for="product-description">Enter Product Description:</label>
+                    <label for="product-description">Product Description:</label>
                     <textarea id="product-description" class="form-control" rows="5" placeholder="Description..."></textarea>
                 </div>
                 <div class="form-group">
@@ -74,7 +71,7 @@
                     <input type="file" id="product-image" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="product-price">Expected Price:</label>
+                    <label for="product-price">Price:</label>
                     <input type="number" id="product-price" min="0" class="form-control" placeholder="e.g. 20">
                 </div>
                 <div class="form-group">
@@ -96,5 +93,4 @@
     <script src="/src/js/main.js"></script>
     <script src="/src/js/index.js"></script>
 </body>
-
 </html>
